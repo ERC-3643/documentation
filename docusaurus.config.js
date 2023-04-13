@@ -58,6 +58,10 @@ const config = {
     ],
   ],
 
+  markdown: {
+    mermaid: true,
+  },
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -125,6 +129,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  themes: ['@docusaurus/theme-mermaid']
 };
 
 module.exports = config;
