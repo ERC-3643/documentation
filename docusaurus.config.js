@@ -127,6 +127,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['solidity'],
       },
     }),
   themes: ['@docusaurus/theme-mermaid']

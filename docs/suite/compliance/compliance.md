@@ -166,7 +166,8 @@ function callModuleFunction(bytes calldata callData, address _module);
 
 ```javascript
 const complianceContract = new ethers.Contract(complianceAddress, ['function callModuleFunction(bytes calldata callData, address module)'], signer);
-const callData = complianceContract.interface.encodeFunctionData('addAllowedCountry', [42]);
+const allowedCountryModule = new ethers.Interface(['function addAllowedCountry(uint256 country)']);
+const callData = allowedCountryModule.encodeFunctionData('addAllowedCountry', [42]);
 await complianceContract.callModuleFunction(callData, moduleAddress);
 ```
 
